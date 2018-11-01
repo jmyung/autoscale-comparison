@@ -18,10 +18,24 @@ AWS 오토스케일링을 이용한다
 - 오토 스케일링용 AMI 생성
 
 #### 시연클릭
-[![k8s](http://img.youtube.com/vi/72a9rQpjIR8/0.jpg)](http://www.youtube.com/watch?v=72a9rQpjIR8)
+[![aws](http://img.youtube.com/vi/72a9rQpjIR8/0.jpg)](http://www.youtube.com/watch?v=72a9rQpjIR8)
 
 
+### 1.2. EC2 Userdata
 
+```
+#!/bin/bash -ex
+yum -y update
+yum -y install httpd php mysql php-mysql
+chkconfig httpd on
+/etc/init.d/httpd start
+if [ ! -f /var/www/html/lab2-app.tar.gz ]; then
+cd /var/www/html
+wget https://us-west-2-aws-staging.s3.amazonaws.com/awsu-ilt/AWS-100-ESS/v4.0/lab-2-configure-website-datastore/scripts/lab2-app.tar.gz
+tar xvfz lab2-app.tar.gz
+chown apache:root /var/www/html/lab2-app/rds.conf.php
+fi
+```
 
 ## 2. 팟(POD) 단위 오토스케일링
 Kubernetes Horizontal Pod Autoscaler를 이용한다
