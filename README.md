@@ -14,15 +14,7 @@ AWS 오토스케일링을 이용한다
 - EC2 생성
 - 생성시 `userdata`에 웹서버 설치 스크립트 포함
 
-### 1.3. 오토 스케일링
-- 오토 스케일링용 AMI 생성
-
-#### 시연클릭
-[![aws](http://img.youtube.com/vi/72a9rQpjIR8/0.jpg)](http://www.youtube.com/watch?v=72a9rQpjIR8)
-
-
-### 1.2. EC2 Userdata
-
+#### EC2 Userdata
 ```
 #!/bin/bash -ex
 yum -y update
@@ -36,6 +28,15 @@ tar xvfz lab2-app.tar.gz
 chown apache:root /var/www/html/lab2-app/rds.conf.php
 fi
 ```
+
+### 1.3. 오토 스케일링
+- 오토 스케일링용 AMI 생성
+
+#### 시연클릭
+[![aws](http://img.youtube.com/vi/72a9rQpjIR8/0.jpg)](http://www.youtube.com/watch?v=72a9rQpjIR8)
+
+
+
 
 ## 2. 팟(POD) 단위 오토스케일링
 Kubernetes Horizontal Pod Autoscaler를 이용한다
