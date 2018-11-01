@@ -6,9 +6,20 @@
 AWS 오토스케일링을 이용한다
 
 ### 1-1. VPC 및 서브넷 생성
-123123
+- 1개 VPC
+- 두개 AZ(가용영역)에 Public / Private Subnet 2개씩 설치
+- 보안그룹 생성
 
-### 1.2. EC2...
+### 1.2. 웹서버 인스턴스 시작
+- EC2 생성
+- 생성시 `userdata`에 웹서버 설치 스크립트 포함
+
+### 1.3. 오토 스케일링
+- 오토 스케일링용 AMI 생성
+
+#### 시연클릭
+[![k8s](http://img.youtube.com/vi/72a9rQpjIR8/0.jpg)](http://www.youtube.com/watch?v=72a9rQpjIR8)
+
 
 
 
@@ -106,3 +117,7 @@ $ kubectl get deployment php-apache
 NAME         DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
 php-apache   1         1         1            1           27m
 ```
+
+#### 시연클릭
+
+[![k8s](http://img.youtube.com/vi/_4Xv9cufFFI/0.jpg)](http://www.youtube.com/watch?v=_4Xv9cufFFI)
