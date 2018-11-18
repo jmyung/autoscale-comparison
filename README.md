@@ -28,8 +28,4 @@ Kubernetes Horizontal Pod Autoscaler를 이용한다.
 
 > ## 4. MSA화 비즈니스 대상 찾기
 
-<<<<<<< HEAD
-blabla  
-=======
-blabla
->>>>>>> 48fb30fa83bbfaf7ddfa8e398ec165e5bb0eba20
+blabla2
