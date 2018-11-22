@@ -8,7 +8,7 @@ AWS 오토스케일링을 이용하여 노드단위 확장을 해본다.
 ## 핸드온 [클릭](doc/1.node-scale.md)
 
 ## 우리가 만들 아키텍쳐
-[![aws](doc/architecture.png)]()
+[![aws](https://github.com/jmyung/autoscale-comparison/blob/master/doc/architecture.png?raw=true)]()
 
 
 
@@ -26,9 +26,4 @@ Kubernetes Horizontal Pod Autoscaler를 이용한다.
 
 > # 3. 둘간의 비교
 
-[![vs](doc/node-vs-pod.png)]()
-
-
-> ## 4. MSA화 비즈니스 대상 찾기
-
-blabla2
+[![vs](https://github.com/jmyung/autoscale-comparison/blob/master/doc/node-vs-pod.png?raw=true)]()
